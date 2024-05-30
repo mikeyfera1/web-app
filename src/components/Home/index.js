@@ -3,7 +3,8 @@ import './index.scss';
 import { useEffect, useState } from "react";
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
-import Logo from './Logo';
+import LogoS from '../../assets/images/logo_mikey.jpg';
+// import Logo from './Logo';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -41,8 +42,10 @@ const Home = () => {
                 <h2> Web Development | Cloud Computing | Artificial Intelligence </h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
-            <Logo />
-        </div>
+            <Link to='/'>
+                <img src = {LogoS} alt ='Logo' style ={{height: 800, position: 'absolute', left: 800}}/> 
+            </Link>  
+            </div>
         <Loader type="pacman" />
         </>
     );
