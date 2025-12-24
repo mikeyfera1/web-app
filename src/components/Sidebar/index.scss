@@ -88,6 +88,18 @@ nav {
         }
     }
 
+    a.work-link {
+        &:after {
+            content: 'WORK';
+        }
+    }
+
+    a.projects-link {
+        &:after {
+            content: 'PROJECTS';
+        }
+    }
+
     a.contact-link {
         &:after {
             content: 'CONTACT';

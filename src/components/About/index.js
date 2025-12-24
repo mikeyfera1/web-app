@@ -23,63 +23,91 @@ const About = () => {
     return (
         <>
         <div className='container about-page'>
-            <div className='text-zone'>
-                <h1>
-                    <AnimatedLetters
-                    letterClass={letterClass}
-                        strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e']}
-                        idx={15}
-                    />
-                </h1>
-                <p>
-                Hello! My name is Michael Fera, and I am a Computer Science student 
-                at the University of Minnesota Twin Cities. I am passionate about 
-                software engineering and am actively seeking an internship to apply 
-                my knowledge and skills in a professional setting.   
-                </p>
-                <p>
-                I am set to graduate in May 2026 with a 3.80 GPA out of 4.00. I have 
-                developed proficiency in programming languages such as Java, Python, 
-                JavaScript, HTML/CSS, SQL, and more. My experience in developing a 
-                Minefield game and creating the front end of Gopher Grades Chrome 
-                extension demonstrates my problem-solving skills. I have also created 
-                a Discord Bot for a Football League, which showcases my proficiency in 
-                API integration using Node.js. I recently completed CS50's Introduction
-                to Computer Science from Harvard University, which helped me improve my
-                skills in abstraction, data structures, algorithms, security, and 
-                software engineering.
-                </p>
-                <p>
-                Apart from coding, I enjoy playing video games and cheering for my favorite 
-                sports teams. I always bring enthusiasm and dedication to every aspect of my 
-                life. If you want to connect, let's explore the exciting intersection of technology, 
-                humor, and shared interests!
-                </p>
-            </div>
+            <div className="content-wrapper">
+                <div className='text-zone'>
+                    <h1>
+                        <AnimatedLetters
+                        letterClass={letterClass}
+                            strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e']}
+                            idx={15}
+                        />
+                    </h1>
 
-            <div className='stage-cube-cont'>
-                <div className='cubespinner'>
-                    <div className='face1'>
-                        <FontAwesomeIcon icon={faPython} color="#3c6a9a" />
+                    <div className='about-section personal'>
+                        <h2>Beyond the Code</h2>
+                        <p>
+                            Outside of academics and engineering, I enjoy staying active and finding new things
+                            that keep me motivated and excited. I am huge runner as I have ran multiple half marathons 
+                            and currently training for a full! I also love movies and tv shows, such as Breaking Bad and Whiplash <strong>(Two of the GOATs)</strong>.
+                            On top of that, I fight for my life watching the Steelers play every week but it is one of the best experiences,
+                            coming from a sports fan.
+                        </p>
+
                     </div>
-                    <div className='face2'>
-                        <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                    <div className='about-section technical'>
+                        <h2>Engineering & Technical Focus</h2>
+                        <p>
+                            I am a Computer Science student at the University of Minnesota Twin Cities,
+                            concentrating in Intelligence and Software Engineering/Database Systems, and expected to
+                            graduate in May 2026 with a 3.85 GPA. My academic foundation spans through data structure 
+                            and algorithms, software engineering, artifical intelligence, operating systems, databases, and
+                            computer graphics
+                        </p>
+                        <p>
+                            My professional expereince includes working as a Software Engineer at Tropho, where I built scalable
+                            mobile and backend systems using React Native, Firebase, and third-party APIs, and serving as an Undergraduate
+                            Teaching Assistant leading Python labs for over 100 students.
+                        </p>
                     </div>
-                    <div className='face3'>
-                        <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+                    <div className='about-section skills'>
+                        <h2>Technical Skills</h2>
+                        <p>
+                            <strong>Languages:</strong> Java, JavaScript, Python, C, Ocaml, HTML/CSS
+                        </p>
+                        <p>
+                        <strong>Frameworks/Technologies:</strong> React, React Native, Node.js, Firebase, Google Cloud, Flask, SQL, Bootstrap
+                        </p>
+                        <p>
+                            <strong>Developer Tools:</strong> Git, GitHub, IntelliJ IDEA, VS Code, JUnit, Mockito
+                        </p>
+                        <p>
+                            <strong>Concepts/Algorithms: </strong> A*, BFS, DFS, Alpha-Beta Pruning, minimax, Heaps, AVL Trees, Graph Traversal, Design Patterns
+                        </p>
+
+                        <h2>Honors and Awards</h2>
+                        <p>
+                            <strong>Tau Beta Pi, Engineering Honor Society</strong> - University of Minnesota
+                        </p>
+                        <p>
+                            <strong>CSE Dean's List (5 Semesters)</strong> - University of Minnesota
+                        </p>
                     </div>
-                    <div className='face4'>
-                        <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-                    </div>
-                    <div className='face5'>
-                        <FontAwesomeIcon icon={faJava} color="#e9342e" />
-                    </div>
-                    <div className='face6'>
-                        <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+                </div>
+
+                <div className='stage-cube-cont'>
+                    <div className='cubespinner'>
+                        <div className='face1'>
+                            <FontAwesomeIcon icon={faPython} color="#3c6a9a" />
+                        </div>
+                        <div className='face2'>
+                            <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                        </div>
+                        <div className='face3'>
+                            <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+                        </div>
+                        <div className='face4'>
+                            <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+                        </div>
+                        <div className='face5'>
+                            <FontAwesomeIcon icon={faJava} color="#e9342e" />
+                        </div>
+                        <div className='face6'>
+                            <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
         <Loader type="pacman" />

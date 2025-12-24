@@ -35,4 +35,28 @@ textarea {
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+  background: transparent !important
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto; 
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100%;
+  overflow-x: hidden;
 }

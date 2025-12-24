@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 import LogoS from '../../assets/images/logo_mikey.jpg';
-// import Logo from './Logo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -23,30 +24,40 @@ const Home = () => {
 
     return (
         <>
-        <div className="container home-page">
-            <div className="text-zone">
-                <h1> 
-                <span className={letterClass}>H</span>
-                <span className={`${letterClass} _12`}>i,</span>
-                <br />
-                <span className={`${letterClass} _13`}>I</span>
-                <span className={`${letterClass} _14`}>'m </span>
-                <AnimatedLetters letterClass={letterClass} 
-                strArray={nameArray}
-                idx={15} />
-                <br />
-                <AnimatedLetters letterClass={letterClass} 
-                strArray={jobArray}
-                idx={28} />
-                </h1>
-                <h2> Web Development | Cloud Computing | Artificial Intelligence </h2>
-                <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+            <div className="container home-page">
+                <div className="text-zone">
+                    <h1> 
+                        <span className={letterClass}>H</span>
+                        <span className={`${letterClass} _12`}>i,</span>
+                        <br />
+                        <span className={`${letterClass} _13`}>I</span>
+                        <span className={`${letterClass} _14`}>'m </span>
+                        <AnimatedLetters 
+                            letterClass={letterClass} 
+                            strArray={nameArray}
+                            idx={15} 
+                        />
+                        <br />
+                        <AnimatedLetters 
+                            letterClass={letterClass} 
+                            strArray={jobArray}
+                            idx={28} 
+                        />
+                    </h1>
+                    <h2> Web Development | Cloud Computing | Artificial Intelligence </h2>
+                    <div style={{display: 'flex', gap: '25px'}}>
+                        <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                        <a href="/Michael's Resume.pdf" download className="flat-button">
+                        <FontAwesomeIcon icon={faDownload} style={{ marginRight: '10px' }} />
+                        RESUME
+                        </a>
+                    </div>
+                </div>
+                <div className="logo-image">
+                        <img src={LogoS} alt='Michael Fera' /> 
+                </div>
             </div>
-            <Link to='/'>
-                <img src = {LogoS} alt ='Logo' style ={{height: 800, position: 'absolute', left: 800}}/> 
-            </Link>  
-            </div>
-        <Loader type="pacman" />
+            <Loader type="pacman" />
         </>
     );
 }

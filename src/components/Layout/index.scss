@@ -2,6 +2,62 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    // Static background image - NEVER MOVES
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; // Full viewport width
+        height: 100vh; // Full viewport height
+        background-image: url('../../assets/images/background.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: -2;
+    }
+    
+    // Animated gradient overlay
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+            -45deg,
+            rgba(10, 14, 39, 0.87),
+            rgba(26, 31, 58, 0.87),
+            rgba(22, 33, 62, 0.87),
+            rgba(15, 52, 96, 0.87)
+        );
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+        z-index: -1;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        background-size: 250% 250%, cover;
+        background-attachment: scroll, scroll;
+    }
 }
 
 .top-tags {
@@ -27,7 +83,7 @@
     width: 100%;
     will-change: contents;
     height: 90%;
-    min-height: 566px;
+    min-height: 90vh;
     position: absolute;
     opacity: 0;
     top: 5%;
@@ -36,6 +92,7 @@
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+    padding-bottom: 50px;
 }
 
 .about-page,
@@ -54,7 +111,7 @@
     h1 {
         font-size: 53px;
         font-family: "Coolvetica";
-        color: #6e84e4;
+        color: #fff;
         font-weight: 400;
         margin-top: 0;
         position: relative;
@@ -90,7 +147,72 @@
         font-family: 'sans-serif';
         font-weight: 300;
         min-width: fit-content;
-        animation: pulse 1s;
+        animation: none;
+
+        &:nth-of-type(1) {
+            animation-delay: 1.1s;
+        }
+
+        &:nth-of-type(2) {
+            animation-delay: 1.2s;
+        }
+
+        &:nth-of-type(3) {
+            animation-delay: 1.3s;
+        }
+    }
+}
+
+.experience-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top:  50%;
+        transform: translateY(-50%);
+        width: 75%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+    }
+
+    h1 {
+        font-size: 53px;
+        font-family: "Coolvetica";
+        color: #fff;
+        font-weight: 400;
+        margin-top: 0;
+        position: relative;
+        margin-bottom: 40px;
+        left: 10px;
+
+        &::before{
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            position: absolute;
+            margin-top: -10px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+
+        &::after {
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            left: -30px;
+            bottom: -20px;
+            opacity: 0.6;
+        }
+    }
+
+    p {
+        font-style: 13px;
+        font-size: 15px;
+        color: #fff;
+        font-family: 'sans-serif';
+        font-weight: 300;
+        min-width: fit-content;
+        animation: none;
 
         &:nth-of-type(1) {
             animation-delay: 1.1s;

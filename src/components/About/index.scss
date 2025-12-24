@@ -1,11 +1,15 @@
+.content-wrapper {
+    display: contents;
+  }
+
 .stage-cube-cont {
-    width: 65%;
-    height: 100%;
-    top: 0;
+    width: 400px;
+    height: 400px;
+    top: 25%;
     padding-top: 18%;
-    margin-left: 0;
+    margin-left: 55%;
     position: absolute;
-    right: 0;
+    right: 10%;
     overflow: hidden;
 }
 
@@ -76,5 +80,108 @@
     }
     83% {
     transform: rotateX(90deg);
+    }
+}
+
+.about-section {
+    margin-bottom: 2.5rem;
+  
+    h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #CBD5E1;
+      font-weight: 600;
+    }
+  
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+  }
+  
+  .about-section.personal {
+    border-left: 3px solid #5ed4f4;
+    padding-left: 14px;
+  }
+  
+  .about-section.technical {
+    border-left: 3px solid #ec4d28;
+    padding-left: 14px;
+  }
+
+  .about-section.skills {
+    border-left: 3px solid #3DDC97;
+    padding-left: 14px;
+  }
+  
+// Mobile styles
+@media screen and (max-width: 768px) {
+    .about-page {
+        padding: 20px 0 100px 0;
+        margin-left: 0 !important;
+
+        .text-zone {
+            position: relative !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: none !important;
+            width: calc(100% - 80px) !important; 
+            margin: 80px 10px 50px 70px;
+            overflow-y: visible;
+            overflow-x: hidden;
+            padding-left: 75px;
+        }
+        
+        h1 {
+            font-size: clamp(32px, 8vw, 53px);
+        }
+    }
+    
+    .content-wrapper {
+        width: 100% !important;
+        display: block;
+    }
+
+    .stage-cube-cont {
+        position: relative !important;
+        width: 80%;
+        height: 300px;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 50px auto 80px;
+    }
+    
+    .cubespinner {
+        transform-origin: 75px 75px 0; 
+        margin-left: calc(50% - 75px);
+        
+        div {
+            width: 150px;
+            height: 150px;
+            font-size: 75px;
+        }
+        
+        .face1 { transform: translateZ(75px); }
+        .face2 { transform: rotateY(90deg) translateZ(75px); }
+        .face3 { transform: rotateY(90deg) rotateX(90deg) translateZ(75px); }
+        .face4 { transform: rotateY(180deg) rotateZ(90deg) translateZ(75px); }
+        .face5 { transform: rotateY(-90deg) rotateZ(90deg) translateZ(75px); }
+        .face6 { transform: rotateX(-90deg) translateZ(75px); }
+    }
+    
+    .about-section {
+        margin-bottom: 2rem;
+        
+        h2 {
+            font-size: 20px;
+        }
+        
+        p {
+            font-size: 14px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
     }
 }

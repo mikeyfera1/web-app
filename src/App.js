@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Work from './components/Work';
+import Projects from './components/Projects';
 import {Helmet} from "react-helmet";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element= {<About />} />
+        <Route path="work" element={<Work />} />
+        <Route path="projects" element={<Projects />} />
         <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>
