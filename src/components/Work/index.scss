@@ -82,3 +82,112 @@
     line-height: 1.6;
   }
   
+// Mobile styles
+@media screen and (max-width: 768px) {
+  .experience-page {
+      .text-zone {
+          width: 75%;
+          padding: 25px;
+          
+          h1 {
+              font-size: clamp(24px, 6vw, 40px);
+              margin-bottom: 1.5rem;
+          }
+      }
+  }
+
+  .experience-section {
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+      
+      h2 {
+          font-size: 18px;
+          margin-bottom: 1rem;
+      }
+  }
+
+  .timeline {
+      gap: 1.5rem;
+      
+      &::before {
+          left: 10px; // Move timeline line closer to edge
+      }
+  }
+
+  .experience-card {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+  }
+
+  .time {
+      min-width: unset;
+      font-size: 12px;
+      margin-left: 0;
+      padding-top: 0;
+      padding-left: 25px; // Align with timeline
+  }
+
+  .card-content {
+      padding: 1rem;
+      gap: 0.75rem;
+      border-radius: 10px;
+      margin-left: 25px; // Align with timeline
+      width: calc(100% - 25px);
+  }
+
+  .card-content img {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0; // Prevent image from shrinking
+  }
+
+  .info h3 {
+      font-size: 15px;
+  }
+
+  .info h4 {
+      font-size: 12px;
+      margin: 0.2rem 0 0.5rem;
+  }
+
+  .info p {
+      font-size: 12px;
+      line-height: 1.5;
+      
+      strong {
+          font-weight: 600;
+      }
+  }
+}
+
+// Extra small mobile devices
+@media screen and (max-width: 480px) {
+  .experience-page {
+      .text-zone h1 {
+          font-size: clamp(20px, 5vw, 32px);
+      }
+  }
+
+  .card-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+      img {
+          margin-bottom: 0.5rem;
+      }
+  }
+
+  .info h3 {
+      font-size: 14px;
+  }
+
+  .info h4 {
+      font-size: 11px;
+  }
+
+  .info p {
+      font-size: 11px;
+  }
+}

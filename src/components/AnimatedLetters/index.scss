@@ -3,11 +3,16 @@
     opacity: 0;
     animation: bounceIn 1s 1s;
     animation-fill-mode: forwards;
-    min-width: 10px;
+
+    &.space {
+        min-width: 7px;
+    }
 }
 
 .text-animate-hover {
-    min-width: 10px;
+    &.space {
+        min-width: 7px;
+    }
     display: inline-block;
     animation-fill-mode: both;
 

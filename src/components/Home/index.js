@@ -45,7 +45,7 @@ const Home = () => {
                         />
                     </h1>
                     <h2> Web Development | Cloud Computing | Artificial Intelligence </h2>
-                    <div style={{display: 'flex', gap: '25px'}}>
+                    <div style={{display: 'flex', gap: '25px', justifyContent: "center"}}>
                         <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                         <a href="/Michael's Resume.pdf" download className="flat-button">
                         <FontAwesomeIcon icon={faDownload} style={{ marginRight: '10px' }} />
