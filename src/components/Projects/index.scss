@@ -11,6 +11,25 @@
         margin-bottom: 40px;
         font-family: "Coolvetica";
       }
+
+      &::before{
+        font-family: 'La Belle Aurore';
+        font-size: 18px;
+        position: absolute;
+        margin-top: -10px;
+        opacity: 0.6;
+        line-height: 18px;
+      }
+
+      &::after {
+          font-family: 'La Belle Aurore';
+          font-size: 18px;
+          line-height: 18px;
+          position: absolute;
+          left: -30px;
+          bottom: -20px;
+          opacity: 0.6;
+      }
   
       .projects-grid {
         display: grid;
